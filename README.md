@@ -5,13 +5,13 @@
  - renders both backend and frontend views using react-router
 
 ## Install
-```npm install express-react-router-views react react-dom react-router history --save```
+```npm install express-react-router-views react react-dom react-router history express --save```
 
 ## Usage on the server side
 
 	var express = require('express');
 	var ExpressReactRouter = require('express-react-router-views');
-    
+
     var routes = require('./routes'); // This are react-router routes, check the example of a routes file below
 
 	var app = express();
@@ -19,7 +19,7 @@
     app.engine('.jsx', ExpressReactRouter.engine({
       routes: routes
     }));
-	
+
     // Set the view engine as jsx or js
 	app.set('view engine', 'jsx');
 

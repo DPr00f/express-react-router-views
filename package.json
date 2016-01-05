@@ -1,6 +1,6 @@
 {
   "name": "express-react-router-views",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,16 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:DPr00f/express-react-router-views.git"
+    "url": "git@github.com:DPr00f/express-react-router-views.git."
   },
   "author": "Joao Lopes <jocolopes@gmail.com> (http://joaolopes.info)",
   "license": "MIT",
+  "peerDependencies": {
+    "react": "0.14.x",
+    "react-dom": "0.14.x",
+    "react-router": "1.x",
+    "express": "4.x",
+    "history": "1.x",
+  },
   "dependencies": {
-    "history": "^1.17.0",
-    "lodash": "^3.10.1",
-    "react": "^0.14.5",
-    "react-dom": "^0.14.5",
-    "react-router": "^1.0.3"
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
     "browserify-middleware": "^7.0.0",
