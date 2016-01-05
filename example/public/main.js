@@ -1,7 +1,7 @@
 'use strict';
-var ExpressReactRouterClient = require('../../lib/client');
+var ExpressReactRouter = require('../../');
 var routes = require('../routes');
 
-ExpressReactRouterClient.render({
+ExpressReactRouter.client.render({
   routes: routes
 });

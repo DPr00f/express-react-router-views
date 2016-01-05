@@ -1,7 +1,7 @@
 'use strict';
 var React = require('react');
 var ReactRouter = require('react-router');
-var ExpressReactRouterClient = require('../../lib/client');
+var ExpressReactRouter = require('../../');
 var Link = ReactRouter.Link;
 var IndexLink = ReactRouter.IndexLink;
 
@@ -13,7 +13,7 @@ var Layout = React.createClass({
       <html lang="en">
       <head>
         <meta charSet="UTF-8" />
-        <title>{ ExpressReactRouterClient.getProps().title }</title>
+        <title>{ ExpressReactRouter.client.getProps().title }</title>
       </head>
       <body>
         <h1>APP!</h1>
@@ -24,7 +24,7 @@ var Layout = React.createClass({
           <li><Link      to="/about"      activeStyle={ACTIVE}>/about</Link></li>
         </ul>
 
-        { this.props.children && React.cloneElement(this.props.children, ExpressReactRouterClient.getProps())}
+        { this.props.children && React.cloneElement(this.props.children, ExpressReactRouter.client.getProps())}
         <script src="/main.js"></script>
       </body>
       </html>

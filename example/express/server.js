@@ -3,11 +3,11 @@ var browserify = require('browserify-middleware');
 var reactify = require('reactify');
 var express = require('express');
 var path = require('path');
-var ExpressReactRouter = require('../');
+var ExpressReactRouter = require(path.join(__dirname, '/../../'));
 
 require('node-jsx').install();
 
-var routes = require('./routes');
+var routes = require(path.join(__dirname, '/../routes'));
 var app = express();
 
 app.engine('.jsx', ExpressReactRouter.engine({
@@ -15,12 +15,12 @@ app.engine('.jsx', ExpressReactRouter.engine({
 }));
 
 app.get('/main.js',
-  browserify(path.join(__dirname, '/public/main.js'), {
+  browserify(path.join(__dirname, '/../public/main.js'), {
     transform: [ reactify ]
   })
 );
 
-app.use('/', express['static'](path.join(__dirname, '/public')));
+app.use('/', express['static'](path.join(__dirname, '/../public')));
 
 app.set('view engine', 'jsx');
 app.set('view', ExpressReactRouter.view);
