@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:DPr00f/express-react-router-views.git."
+    "url": "git@github.com:DPr00f/express-react-router-views"
   },
   "author": "Joao Lopes <jocolopes@gmail.com> (http://joaolopes.info)",
   "license": "MIT",
