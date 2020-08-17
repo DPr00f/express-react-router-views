@@ -20,7 +20,7 @@
     "history": "1.x"
   },
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "browserify-middleware": "^7.0.0",
